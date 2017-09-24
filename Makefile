@@ -222,7 +222,7 @@ FLOYD_FILES= \
    nested_field_lemmas.v efield_lemmas.v proj_reptype_lemmas.v replace_refill_reptype_lemmas.v \
    data_at_rec_lemmas.v field_at.v stronger.v \
    for_lemmas.v semax_tactics.v expr_lemmas.v diagnosis.v simple_reify.v simpl_reptype.v \
-   freezer.v deadvars.v
+   freezer.v deadvars.v Clightnotations.v
 #real_forward.v
 
 WAND_DEMO_FILES= \
@@ -473,6 +473,7 @@ aes: .loadpath $(AES_FILES:%.v=aes/%.vo)
 hkdf:    .loadpath $(HKDF_FILES:%.v=sha/%.vo)
 # drbg: .loadpath $(DRBG_FILES:%.v=verifiedDrbg/%.vo)
 mailbox: .loadpath mailbox/verif_mailbox.vo
+atomics: .loadpath mailbox/verif_kvnode_atomic.vo mailbox/verif_kvnode_atomic_ra.vo mailbox/verif_hashtable_atomic.vo mailbox/verif_hashtable_atomic_ra.vo 
 
 CGFLAGS =  -DCOMPCERT
 
